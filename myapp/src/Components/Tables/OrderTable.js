@@ -28,22 +28,23 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function createData(ID, Name, Email, MobileNumber) {
-  return { ID, Name, Email, MobileNumber };
+function createData(OrderID, CustomerID, ProductID, Qty, OrderDate) {
+  return { OrderID, CustomerID, ProductID, Qty, OrderDate };
 }
 
-const rows = [createData("C001", "Nimal", "Nimal@gmail.com", "077969456")];
+const rows = [createData("Or001", "C001", "P001", "10", "2000.05.23")];
 
-export default function CustomerTable() {
+export default function OrderTable() {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell>Customer ID</StyledTableCell>
-            <StyledTableCell align="right">Name</StyledTableCell>
-            <StyledTableCell align="right">Email</StyledTableCell>
-            <StyledTableCell align="right">Mobile Number</StyledTableCell>
+            <StyledTableCell>Order ID</StyledTableCell>
+            <StyledTableCell align="right">CustomerID</StyledTableCell>
+            <StyledTableCell align="right">ProductID</StyledTableCell>
+            <StyledTableCell align="right">Qty</StyledTableCell>
+            <StyledTableCell align="right">OrderDate</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>

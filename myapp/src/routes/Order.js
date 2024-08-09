@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../Components/Navbar";
 import Header from "../Components/Header";
 import OrderLayout from "../Components/OrderLayout";
+import OrderTable from "../Components/Tables/OrderTable";
 
 const Order = () => {
   return (
@@ -9,6 +10,7 @@ const Order = () => {
       <Navbar />
       <Header heading="Manage Orders" />
       <OrderLayout />
+      <OrderTable />
     </div>
   );
 };
