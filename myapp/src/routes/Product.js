@@ -1,9 +1,12 @@
 import React from "react";
+import Navbar from "../Components/Navbar";
+import Header from "../Components/Header";
 
 const Product = () => {
   return (
     <div>
-      <h1>Hellow Product</h1>
+      <Navbar />
+      <Header heading="Manage Products" />
     </div>
   );
 };
