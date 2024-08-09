@@ -21,6 +21,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 1.2rem;
   line-height: 1.2;
+
 }
 
 code {
@@ -35,7 +36,7 @@ ul {
 a {
   text-decoration: none;
 }
-.button {
+/* .button {
   padding: 17px 28px;
   font-size: 1.2rem;
   color: #fff;
@@ -58,4 +59,4 @@ a {
   height: 3px;
   margin: 5px auto;
   background-color: var(--primary-color);
-}
+} */

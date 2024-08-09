@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "../Components/Navbar.css";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
-  //setting mobile nav
+  // setting mobile nav
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
 
@@ -35,8 +35,13 @@ const Navbar = () => {
         </div>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
+            <Link to="/" spy={true} smooth={true} offset={-100} duration={500}>
+              Home
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link
-              to="hero"
+              to="/user"
               spy={true}
               smooth={true}
               offset={-100}
@@ -47,7 +52,7 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <Link
-              to="about"
+              to="/customer"
               spy={true}
               smooth={true}
               offset={-100}
@@ -58,7 +63,7 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <Link
-              to="breeds"
+              to="/order"
               spy={true}
               smooth={true}
               offset={-100}
@@ -69,7 +74,7 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <Link
-              to="footer"
+              to="/product"
               spy={true}
               smooth={true}
               offset={-150}
@@ -79,7 +84,6 @@ const Navbar = () => {
             </Link>
           </li>
           <button className="signin-btn">
-            {" "}
             <span>Sign In</span>
           </button>
         </ul>
