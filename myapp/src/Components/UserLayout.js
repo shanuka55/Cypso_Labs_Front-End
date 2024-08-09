@@ -3,13 +3,13 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
-import "../Components/UserLayout.css";
+import "../Components/Layout.css";
 import { DeleteIcon } from "@mui/icons-material";
 
 const UserLayout = () => {
   return (
     <Box
-      className="User-layout-box"
+      className="layout-box"
       component="form"
       sx={{
         "& > :not(style)": { m: 1, width: "25ch" },
@@ -23,7 +23,7 @@ const UserLayout = () => {
       <TextField id="outlined-basic" label="ROLES" variant="outlined" />
       {/* <TextField id="filled-basic" label="Filled" variant="filled" />
       <TextField id="standard-basic" label="Standard" variant="standard" /> */}
-      <Stack direction="row" spacing={3}>
+      <Stack direction="row" spacing={3} className="btnUserLayout">
         <Button variant="contained" color="info">
           Add
         </Button>

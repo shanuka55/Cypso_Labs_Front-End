@@ -1,0 +1,37 @@
+.layout-box {
+    padding: 2rem;
+}
+.btnOrderLayout {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    left: 75%;
+    top: 10px;
+    
+}
+.btnProductLayout {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    left: 65%;
+    top: 10px;
+}
+.btnCustomerLayout{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    left: 65%;
+    top: 10px;
+}
+.btnUserLayout{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    left: 65%;
+    top: 10px;
+}
+.order-container {
+    width: 100%;
+    height: auto;
+    background-color: rgb(165, 178, 175);
+}
