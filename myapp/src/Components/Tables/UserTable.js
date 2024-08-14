@@ -28,35 +28,33 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function createData(ID, Name, Email, MobileNumber) {
-  return { ID, Name, Email, MobileNumber };
+function createData(UserID, Name, Password, Role) {
+  return { UserID, Name, Password, Role };
 }
 
-const rows = [createData("C001", "Nimal", "Nimal@gmail.com", "077969456")];
+const rows = [createData("User01", "Nimal", "1234", "Admin")];
 
-export default function CustomerTable() {
+export default function UserTable() {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell>Customer ID</StyledTableCell>
+            <StyledTableCell>User ID</StyledTableCell>
             <StyledTableCell align="right">Name</StyledTableCell>
-            <StyledTableCell align="right">Email</StyledTableCell>
-            <StyledTableCell align="right">Mobile Number</StyledTableCell>
+            <StyledTableCell align="right">Password</StyledTableCell>
+            <StyledTableCell align="right">Role</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
-            <StyledTableRow key={row.ID}>
+            <StyledTableRow key={row.UserID}>
               <StyledTableCell component="th" scope="row">
-                {row.ID}
+                {row.UserID}
               </StyledTableCell>
               <StyledTableCell align="right">{row.Name}</StyledTableCell>
-              <StyledTableCell align="right">{row.Email}</StyledTableCell>
-              <StyledTableCell align="right">
-                {row.MobileNumber}
-              </StyledTableCell>
+              <StyledTableCell align="right">{row.Password}</StyledTableCell>
+              <StyledTableCell align="right">{row.Role}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>

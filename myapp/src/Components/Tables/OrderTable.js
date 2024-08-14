@@ -32,7 +32,7 @@ function createData(OrderID, CustomerID, ProductID, Qty, OrderDate) {
   return { OrderID, CustomerID, ProductID, Qty, OrderDate };
 }
 
-const rows = [createData("Or001", "C001", "P001", "10", "2000.05.23")];
+const rows = [createData("Or001", "C001", "P001", 10, "2000-05-23")];
 
 export default function OrderTable() {
   return (
@@ -41,25 +41,22 @@ export default function OrderTable() {
         <TableHead>
           <TableRow>
             <StyledTableCell>Order ID</StyledTableCell>
-            <StyledTableCell align="right">CustomerID</StyledTableCell>
-            <StyledTableCell align="right">ProductID</StyledTableCell>
-            <StyledTableCell align="right">Qty</StyledTableCell>
-            <StyledTableCell align="right">OrderDate</StyledTableCell>
+            <StyledTableCell align="right">Customer ID</StyledTableCell>
+            <StyledTableCell align="right">Product ID</StyledTableCell>
+            <StyledTableCell align="right">Quantity</StyledTableCell>
+            <StyledTableCell align="right">Order Date</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
-            <StyledTableRow key={row.ID}>
+            <StyledTableRow key={row.OrderID}>
               <StyledTableCell component="th" scope="row">
-                {row.ID}
+                {row.OrderID}
               </StyledTableCell>
-              <StyledTableCell component="th" scope="row">
-                {row.Name}
-              </StyledTableCell>
-              <StyledTableCell align="right">{row.Email}</StyledTableCell>
-              <StyledTableCell align="right">
-                {row.MobileNumber}
-              </StyledTableCell>
+              <StyledTableCell align="right">{row.CustomerID}</StyledTableCell>
+              <StyledTableCell align="right">{row.ProductID}</StyledTableCell>
+              <StyledTableCell align="right">{row.Qty}</StyledTableCell>
+              <StyledTableCell align="right">{row.OrderDate}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>
