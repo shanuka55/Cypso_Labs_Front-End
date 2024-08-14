@@ -25,7 +25,9 @@ const Navbar = () => {
   return (
     <header className={color ? "header header-bg" : "header"}>
       <nav className="navbar">
-        <a href="/" className="logo"></a>
+        <a href="/" className="logo">
+          ABC Company
+        </a>
         <div className="hamburger" onClick={handleClick}>
           {click ? (
             <FaTimes size={30} style={{ color: "#ffffff" }} />

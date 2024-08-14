@@ -57,6 +57,11 @@
 .hamburger {
     display: none;
 }
+.logo {
+    color: #ba3232;
+    font-size: 22px;
+    font-weight: 600;
+}
 
 
 .signin-btn {
